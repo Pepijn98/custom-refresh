@@ -1,0 +1,5 @@
+.env
+.notes.txt
+dist
+node_modules
+.web-extension-id

@@ -1,0 +1,54 @@
+{
+    "name": "custom-refresh",
+    "version": "1.1.0",
+    "description": "Refresh the current page bypassing the cache",
+    "type": "module",
+    "license": "MIT",
+    "private": true,
+    "author": {
+        "email": "pepijn@vdbroek.dev",
+        "name": "Pepijn van den Broek",
+        "url": "https://vdbroek.dev"
+    },
+    "homepage": "https://github.com/Pepijn98/custom-refresh#readme",
+    "repository": {
+        "type": "git",
+        "url": "git+https://github.com/Pepijn98/custom-refresh.git"
+    },
+    "bugs": {
+        "url": "https://github.com/Pepijn98/custom-refresh/issues"
+    },
+    "scripts": {
+        "chrome": "node --no-warnings bin/chrome.js",
+        "ff:build": "web-ext build --filename=\"firefox-{version}.zip\"",
+        "ff:sign": "dotenv -e .env -- web-ext sign --api-key=$WEB_EXT_API_KEY --api-secret=$WEB_EXT_API_SECRET --channel=unlisted"
+    },
+    "devDependencies": {
+        "archiver": "^6.0.1",
+        "dotenv-cli": "^7.3.0",
+        "web-ext": "^7.7.0"
+    },
+    "webExt": {
+        "ignoreFiles": [
+            ".vscode",
+            ".git",
+            ".gitignore",
+            ".env",
+            ".notes.txt",
+            "bin",
+            "dist",
+            "manifest.chrome.json",
+            "node_modules",
+            "bun.lockb",
+            "README.md"
+        ],
+        "sourceDir": ".",
+        "artifactsDir": "dist/firefox",
+        "build": {
+            "overwriteDest": true
+        },
+        "run": {
+            "firefox": "firefox"
+        }
+    }
+}

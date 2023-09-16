@@ -1,0 +1,33 @@
+{
+    "manifest_version": 3,
+    "name": "Custom Refresh",
+    "version": "1.1.0",
+    "description": "Refresh the current page bypassing the cache.",
+    "action": {
+        "default_title": "Refresh Page"
+    },
+    "icons": {
+        "16": "icons/16_w.png",
+        "32": "icons/32_w.png",
+        "48": "icons/48_w.png",
+        "128": "icons/128_w.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "scripts": [
+            "background.js"
+        ],
+        "type": "module"
+    },
+    "commands": {
+        "shortcut-refresh": {
+            "suggested_key": {
+                "default": "Ctrl+Alt+R",
+                "mac": "Command+Alt+R"
+            },
+            "description": "Refresh the current page bypassing the cache."
+        }
+    }
+}

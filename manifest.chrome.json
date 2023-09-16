@@ -1,0 +1,68 @@
+{
+    "manifest_version": 3,
+    "name": "Custom Refresh",
+    "version": "1.1.0",
+    "description": "Refresh the current page bypassing the cache.",
+    "action": {
+        "default_title": "Refresh Page",
+        "default_icon": {
+            "16": "icons/16_w.png",
+            "32": "icons/32_w.png",
+            "48": "icons/48_w.png",
+            "128": "icons/128_w.png"
+        },
+        "theme_icons": [
+            {
+                "light": "icons/16.png",
+                "dark": "icons/16_w.png",
+                "size": 16
+            },
+            {
+                "light": "icons/32.png",
+                "dark": "icons/32_w.png",
+                "size": 32
+            },
+            {
+                "light": "icons/48.png",
+                "dark": "icons/48_w.png",
+                "size": 48
+            },
+            {
+                "light": "icons/128.png",
+                "dark": "icons/128_w.png",
+                "size": 128
+            }
+        ]
+    },
+    "icons": {
+        "16": "icons/16_w.png",
+        "32": "icons/32_w.png",
+        "48": "icons/48_w.png",
+        "128": "icons/128_w.png"
+    },
+    "permissions": [
+        "tabs"
+    ],
+    "background": {
+        "service_worker": "background.js",
+        "type": "module"
+    },
+    "content_scripts": [
+        {
+            "matches": [
+                "<all_urls>"
+            ],
+            "js": [
+                "content.js"
+            ]
+        }
+    ],
+    "commands": {
+        "shortcut-refresh": {
+            "suggested_key": {
+                "default": "Shift+Alt+R"
+            },
+            "description": "Refresh the current page bypassing the cache."
+        }
+    }
+}
