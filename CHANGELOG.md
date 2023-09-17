@@ -11,10 +11,10 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 ### Changed
     - Using manifest v3
 
-## [1.0.1] May 18, 2021
+## [1.0.1] Oct 11, 2022
 ### Added
     - Firefox support
 
-## [1.0.0] Feb 10, 2021
+## [1.0.0] Oct 10, 2022
 ### Added
     - Initial release
